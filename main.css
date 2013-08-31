@@ -225,3 +225,11 @@ body {
 	opacity: .875;
 	white-space: pre;
 }
+
+#aboutExpander {
+	margin: 0 .5em;
+	font-size: .875em;
+}
+#aboutTextwall {
+	display: none;
+}
