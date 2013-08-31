@@ -90,7 +90,7 @@ body {
 #nav {
 	float: left;
 	max-width: 18.75%;
-	margin: -86px 0 0 -25px;
+	margin: -25px 0 0 -25px;
 }
 #nav > ul {
 	width: -webkit-fit-content;
