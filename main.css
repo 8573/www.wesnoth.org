@@ -32,8 +32,8 @@ strong, b {
 	display: block;
 	background: url(imgs/bluebg.png) #101522;
 	box-shadow: 0 0 1.5em .125em #000;
-	border: 25px solid brown;
-	border-image: url(imgs/border/strong_opaque-noshade.png) 25 repeat;
+	border: 24px solid brown;
+	border-image: url(imgs/border/strong_opaque-noshade3.png) 24 repeat;
 }
 #footer {
 	display: block;
