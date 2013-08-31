@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: DejaVuSans;
+	src: local("DejaVuSans"), local("DejaVu Sans"),
+		url(imgs/DejaVuSans.woff) format("woff"),
+		url(imgs/DejaVuSans.ttf) format("truetype"),
+		url(imgs/DejaVuSans.eot) format("embedded-opentype");
+	/* This is the version Wesnoth uses (2.33), not the latest (2.34). */
+}
+
+main, body, article, section, nav, aside, hgroup, header, footer {
+	display: block;
+}
+a {
+	color: goldenrod;
+	text-decoration: none;
+}
+a:hover {
+	color: gold;
+}
+p {
+	white-space: pre-wrap;
+}
+strong, b {
+	/* Prevent my browser from trying and failing to bold the text,
+	 * pending addition of DejaVu Sans Bold. */
+	font-weight: normal;
+}
+
+#header, #nav > ul > li > a {
+	display: block;
+	background: url(imgs/bluebg.png) #101522;
+	box-shadow: 0 0 1.5em .125em #000;
+	border: 25px solid brown;
+	border-image: url(imgs/border/strong_opaque-noshade.png) 25 repeat;
+}
+#footer {
+	display: block;
+	background: url(imgs/bluebg.png) #101522;
+	box-shadow: 0 0 1.5em .125em #000;
+	border: 24px solid goldenrod;
+	border-image: url(imgs/border/lite_opaque-noshade3.png) 24 repeat;
+}
+
+:root, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	background-color: tan;
+	/* This darker background might work; it’s worth trying at least. */
+	/*background-color: #785D37*/
+	font-family: DejaVuSans, sans-serif;
+	color: #EEE;
+}
+:root:before {
+	content: "";
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: url(imgs/titlescreen.png) center/contain no-repeat,
+		url(imgs/background.jpg) center/cover no-repeat #785D37;
+	opacity: .5;
+}
+body {
+	z-index: 1;
+}
+
+#header {
+	position: fixed;
+	width: 100%;
+	height: 15.625%;
+	max-height: 12.5em;
+	top: 0;
+	z-index: 8;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+}
+#title {
+	display: inline-block;
+	max-width: 50%;
+	max-height: 100%;
+}
+
+#nav {
+	float: left;
+	max-width: 18.75%;
+	margin: -86px 0 0 -25px;
+}
+#nav > ul {
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: 0;
+	padding: 0 25px;
+	list-style-type: none;
+}
+#nav > ul > li {
+	position: relative;
+}
+#nav > ul > li > a {
+	display: block;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+	text-shadow: 0 0 .5em #000;
+	/* These multiple-shadow effects looked somewhat cheesy; they were never
+	 * seriously considered. */
+	/*text-shadow: 0 -.125em .0em #000, 0 -.125em .25em #FFF;*/
+}
+#nav > ul > li > a:hover, #screencapturesLink:hover {
+	text-shadow: 0 0 1em #FFF;
+	/*text-shadow: 0 .125em .0em #000, 0 .125em .25em #FFF;*/
+}
+#nav > ul > li:nth-child(1) { z-index: 5; }
+#nav > ul > li:nth-child(2) { z-index: 4; }
+#nav > ul > li:nth-child(3) { z-index: 3; }
+#nav > ul > li:nth-child(4) { z-index: 2; }
+#nav > ul > li:nth-child(5) { z-index: 1; }
+
+#downloadLink, #screencapturesLink {
+	display: block;
+	line-height: 0;
+}
+#downloadLink {
+	margin: 0 -25px;
+}
+#downloadLinkText, #screencapturesLinkText {
+	display: block;
+	position: relative;
+	width: 75%;
+	width: calc(100% - 2em);
+	width: -webkit-min-content;
+	width: -moz-min-content;
+	width: min-content;
+	max-width: 100%;
+	height: 1px;
+	z-index: 2;
+	background-color: rgba(0,0,0,.65098);
+	box-shadow: 0 0 1em 1em rgba(0,0,0,.65098);
+	font-size: 1.5em;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+#downloadLinkText {
+	margin: -47% auto 47%;
+}
+#screencapturesLinkText {
+	margin: -25% auto 25%;
+}
+#logo, #screencapturesPreview {
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+#screencapturesPreview {
+	opacity: .75;
+}
+
+#main {
+	width: 100%;
+	margin: 10.9375% 0 0;
+	padding: 0;
+}
+/*#main:before {
+	content: "";
+	display: block;
+	float: left;
+	width: 27.5%;
+}*/
+/*#main:after {
+	content: "";
+	display: block;
+	float: right;
+	width: 3.75%;
+}*/
+#main > * {
+	float: left;
+	width: 34.375%;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#main > * > * {
+	width: 100%;
+	margin: 0 0 1em;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* Matches Wesnoth translucent backgrounds. */
+	background: rgba(0,0,0,.65098);
+	-webkit-background-clip: padding;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	border: 25px solid transparent;
+	border-image: url(imgs/border/lite_translucent.png) 25 repeat;
+	text-align: justify;
+	line-height: 1.3125;
+}
+#leftColumn {
+	margin: 0 0 0 21.09375%;
+}
+#rightColumn {
+	margin: 0 0 0 2em;
+}
+
+#footer {
+	position: fixed;
+	bottom: -28.125px;
+	right: -28.125px;
+	margin: 0;
+	padding: 0 18.75px 9.375px 0;
+	z-index: 8;
+}
+#footerText {
+	display: block;
+	margin: -12.5px 0 0 -6.25px;
+	color: gray;
+	opacity: .875;
+	white-space: pre;
+}
