@@ -66,7 +66,7 @@ body {
 .wesgui, #header, #logo, #nav > ul > li > a {
 	display: block;
 	background-image: url(imgs/bluebg.png);
-	border-image: url(imgs/border-strong.png) 25 repeat;
+	border-image: url(imgs/border/strong_opaque.png) 25 repeat;
 	border-width: 25px;
 	box-shadow: 0 0 1.5em .125em #000;
 }

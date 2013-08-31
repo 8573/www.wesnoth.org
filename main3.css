@@ -52,7 +52,7 @@ body {
 	display: block;
 	background: url(imgs/bluebg.png) #101522;
 	border: 25px solid #3B2516;
-	border-image: url(imgs/border-strong.png) 25 repeat;
+	border-image: url(imgs/border/strong_opaque.png) 25 repeat;
 	box-shadow: 0 0 1.5em .125em #000;
 }
 
